@@ -7,5 +7,6 @@ namespace WebApi_estudo_Biblioteca.Services.Autor
         Task<ResponseModel<List<AutorModel>>> ListarAutores();
         Task<ResponseModel<AutorModel>> BuscarAutorPorId(int idAutor);
         Task<ResponseModel<AutorModel>> BuscarAutorPorIdLivro(int idLivro);
+        Task<ResponseModel<List<AutorModel>>> CriarAutor();
     }
 }
