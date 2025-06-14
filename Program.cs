@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi_estudo_Biblioteca.Data;
 using WebApi_estudo_Biblioteca.Services.Autor;
+using WebApi_estudo_Biblioteca.Services.Livro;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<IAutorInterface, AutorService>(); 
+builder.Services.AddScoped<ILivroInterface, LivroService>(); 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
