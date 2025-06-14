@@ -1,4 +1,5 @@
-﻿using WebApi_estudo_Biblioteca.Models;
+﻿using WebApi_estudo_Biblioteca.Dto.Autor;
+using WebApi_estudo_Biblioteca.Models;
 
 namespace WebApi_estudo_Biblioteca.Services.Autor
 {
@@ -7,6 +8,8 @@ namespace WebApi_estudo_Biblioteca.Services.Autor
         Task<ResponseModel<List<AutorModel>>> ListarAutores();
         Task<ResponseModel<AutorModel>> BuscarAutorPorId(int idAutor);
         Task<ResponseModel<AutorModel>> BuscarAutorPorIdLivro(int idLivro);
-        Task<ResponseModel<List<AutorModel>>> CriarAutor();
+        Task<ResponseModel<List<AutorModel>>> CriarAutor(AutorCriacaoDto autorCriacaoDto);
+        Task<ResponseModel<List<AutorModel>>> EditarAutor(AutorEdicaoDto autorEdicaoDto);
+        Task<ResponseModel<List<AutorModel>>> ExcluirAutor(int idAutor);
     }
 }
